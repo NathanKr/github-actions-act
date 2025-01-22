@@ -1,0 +1,116 @@
+PS C:\Users\Nathan\Desktop\Github\github-actions-act> act
+time="2025-01-22T13:35:52+02:00" level=info msg="Using docker host 'npipe:////./pipe/docker_engine', and daemon socket 'npipe:////./pipe/docker_engine'"
+? Please choose the default image you want to use with act:
+  - Large size image: ca. 17GB download + 53.1GB storage, you will need 75GB of free disk space, snapshots of GitHub Hosted Runners without snap and pulled docker images
+? Please choose the default image you want to use with act:
+  - Large size image: ca. 17GB download + 53.1GB storage, you will need 75GB of free disk space, snapshots of GitHub Hosted Runners without snap and pulled docker images
+  - Medium size image: ~500MB, includes only necessary tools to bootstrap actions and aims to be compatible with most 
+actions
+  - Micro size image: <200MB, contains only NodeJS required to bootstrap actions, doesn't work with all actions       
+
+Default image and other options can be changed manually in C:\Users\Nathan\AppData\Local\act\actrc (please refer to https://github.com/nektos/act#configuration for additional information about file structure) Medium
+[Test CI/test         ] 🚀  Start image=catthehacker/ubuntu:act-latest
+[Hello world/say-hello] 🚀  Start image=catthehacker/ubuntu:act-latest
+[Test CI/test         ]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true     
+[Hello world/say-hello]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true     
+[Test CI/test         ]   🐳  docker create image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Test CI/test         ]   🐳  docker run image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Test CI/test         ]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[Test CI/test         ]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v3
+[Hello world/say-hello]   🐳  docker create image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Hello world/say-hello]   🐳  docker run image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Hello world/say-hello]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[Hello world/say-hello] ⭐ Run Main Run a one-line script
+[Hello world/say-hello]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/0] user= workdir=
+| Hello, world!
+[Hello world/say-hello]   ✅  Success - Main Run a one-line script
+[Hello world/say-hello] Cleaning up container for job say-hello
+[Hello world/say-hello] 🏁  Job succeeded
+[Test CI/test         ] ⭐ Run Main Checkout code
+[Test CI/test         ]   🐳  docker cp src=C:\Users\Nathan\Desktop\Github\github-actions-act\. dst=/mnt/c/Users/Nathan/Desktop/Github/github-actions-act
+[Test CI/test         ]   ✅  Success - Main Checkout code
+[Test CI/test         ] ⭐ Run Main Setup Node.js
+[Test CI/test         ]   🐳  docker cp src=C:\Users\Nathan\.cache\act/actions-setup-node@v3/ dst=/var/run/act/actions/actions-setup-node@v3/
+[Test CI/test         ]   🐳  docker exec cmd=[/opt/acttoolcache/node/18.20.5/x64/bin/node /var/run/act/actions/actions-setup-node@v3/dist/setup/index.js] user= workdir=
+[Test CI/test         ]   💬  ::debug::isExplicit: 20.9.0
+[Test CI/test         ]   💬  ::debug::explicit? true
+[Test CI/test         ]   💬  ::debug::checking cache: /opt/hostedtoolcache/node/20.9.0/x64
+[Test CI/test         ]   💬  ::debug::not found
+| Attempting to download 20.9.0...
+[Test CI/test         ]   💬  ::debug::No manifest cached
+[Test CI/test         ]   💬  ::debug::Getting manifest from actions/node-versions@main
+[Test CI/test         ]   💬  ::debug::check 22.13.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.12.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.11.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.10.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.9.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.8.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.7.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.6.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.5.1 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.5.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.4.1 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.4.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.3.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.2.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.1.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 22.0.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.18.1 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.18.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.17.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.16.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.15.1 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.15.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.14.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.13.1 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.13.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.12.2 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.12.1 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.12.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.11.1 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.11.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.10.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::check 20.9.0 satisfies 20.9.0
+[Test CI/test         ]   💬  ::debug::arm64===x64 && darwin===linux
+[Test CI/test         ]   💬  ::debug::x64===x64 && darwin===linux
+[Test CI/test         ]   💬  ::debug::x64===x64 && linux===linux
+[Test CI/test         ]   💬  ::debug::matched 20.9.0
+| Acquiring 20.9.0 - x64 from https://github.com/actions/node-versions/releases/download/20.9.0-6797996195/node-20.9.0-linux-x64.tar.gz
+[Test CI/test         ]   💬  ::debug::Downloading https://github.com/actions/node-versions/releases/download/20.9.0-6797996195/node-20.9.0-linux-x64.tar.gz
+[Test CI/test         ]   💬  ::debug::Destination /tmp/fe17e2f4-9fec-4994-a606-1d9000bef26d
+[Test CI/test         ]   💬  ::debug::download complete
+| Extracting ...
+[Test CI/test         ]   💬  ::debug::Checking tar --version
+[Test CI/test         ]   💬  ::debug::tar (GNU tar) 1.34%0ACopyright (C) 2021 Free Software Foundation, Inc.%0ALicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.%0AThis is free software: you are free to change and redistribute it.%0AThere is NO WARRANTY, to the extent permitted by law.%0A%0AWritten by John Gilmore and Jay 
+Fenlason.
+| [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword -C /tmp/564b5def-34eb-4c21-8b3f-0b1571ceda23 -f /tmp/fe17e2f4-9fec-4994-a606-1d9000bef26d
+| Adding to the cache ...
+[Test CI/test         ]   💬  ::debug::Caching tool node 20.9.0 x64
+[Test CI/test         ]   💬  ::debug::source dir: /tmp/564b5def-34eb-4c21-8b3f-0b1571ceda23
+[Test CI/test         ]   💬  ::debug::destination /opt/hostedtoolcache/node/20.9.0/x64
+[Test CI/test         ]   💬  ::debug::finished caching tool
+[Test CI/test         ]   ❓  ::group::Environment details
+| node: v20.9.0
+| npm: 10.1.0
+| yarn:
+[Test CI/test         ]   ❓  ::endgroup::
+[Test CI/test         ]   ❓ add-matcher /run/act/actions/actions-setup-node@v3/.github/tsc.json
+[Test CI/test         ]   ❓ add-matcher /run/act/actions/actions-setup-node@v3/.github/eslint-stylish.json
+[Test CI/test         ]   ❓ add-matcher /run/act/actions/actions-setup-node@v3/.github/eslint-compact.json
+[Test CI/test         ]   ✅  Success - Main Setup Node.js
+[Test CI/test         ]   ⚙  ::set-output:: node-version=v20.9.0
+[Test CI/test         ]   ⚙  ::add-path:: /opt/hostedtoolcache/node/20.9.0/x64/bin
+[Test CI/test         ] ⭐ Run Main Install dependencies
+[Test CI/test         ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+| npm ERR! code ENOENT
+| npm ERR! syscall open
+| npm ERR! path /mnt/c/Users/Nathan/Desktop/Github/github-actions-act/package.json
+| npm ERR! errno -2
+| npm ERR! enoent ENOENT: no such file or directory, open '/mnt/c/Users/Nathan/Desktop/Github/github-actions-act/package.json'
+| npm ERR! enoent This is related to npm not being able to find a file.
+| npm ERR! enoent
+|
+| npm ERR! A complete log of this run can be found in: /root/.npm/_logs/2025-01-22T11_39_58_613Z-debug-0.log
+[Test CI/test         ]   ❌  Failure - Main Install dependencies
+[Test CI/test         ] exitcode '254': failure
+[Test CI/test         ] 🏁  Job failed
