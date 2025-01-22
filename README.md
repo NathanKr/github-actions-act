@@ -1,5 +1,5 @@
 <h1>Project Name</h1>
-....
+Run GitHub Actions Locally with act
 
 
 
@@ -22,8 +22,19 @@ The solution is to run it locally using nektos/act. But how do you do it? That's
 
 
 <h2>Installation</h2>
-....
 
+<a href='https://nektosact.com/installation/index.html'>prerequisites for running act</a> this actually includes
+
+<ul>
+<li>install docker . i am using Windows 10 , so installed docker desktop <a href='https://docs.docker.com/desktop/setup/install/windows-install/'>here</a>)</li>
+<li>install act , follow <a href='https://nektosact.com/installation/index.html'>this</a> i will use <a href='https://nektosact.com/installation/gh.html'>Github Cli</a> 
+
+```bash
+gh extension install https://github.com/nektos/gh-act
+```
+
+</li>
+</ul>
 
 <h2>Usage</h2>
 ....
@@ -39,7 +50,7 @@ nektos/act
 ....
 
 <h2>Demo</h2>
-....
+dashboard ?
 
 <h2>Points of Interest</h2>
 <ul>
@@ -50,6 +61,8 @@ nektos/act
 <h2>References</h2>
 <ul>
     <li><a href='https://github.com/nektos/act'>GitHub repository for act</a></li>
+    <li><a href='https://youtu.be/x239z6DdE0A?si=Y0pzO1AkyiMUoe-T'> Introduction to GitHub Actions: Learn Workflows with Examples </a></li>
+
    
 </ul>
 
