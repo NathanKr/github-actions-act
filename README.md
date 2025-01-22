@@ -27,11 +27,16 @@ The solution is to run it locally using nektos/act. But how do you do it? That's
 
 <ul>
 <li>install docker . i am using Windows 10 , so installed docker desktop <a href='https://docs.docker.com/desktop/setup/install/windows-install/'>here</a>)</li>
-<li>install act , follow <a href='https://nektosact.com/installation/index.html'>this</a> i will use <a href='https://nektosact.com/installation/gh.html'>Github Cli</a> 
+<li>install act , follow <a href='https://nektosact.com/installation/index.html'>this</a> 
+i will use chocolatey <a href='https://nektosact.com/installation/chocolatey.html'>here</a> 
+
+make sure you run the following as administrator
 
 ```bash
-gh extension install https://github.com/nektos/gh-act
+choco install act-cli
 ```
+This image show the results if this command on my machine 
+<img src='./figs/install-act-cli-using-choco.png'/>
 
 </li>
 </ul>
