@@ -106,7 +106,7 @@ run like in files 1,2,3 and copy output
 <h2>Points of Interest</h2>
 <ul>
     <li>in short why docker --> as runner</li>
-   
+   <li>Manage and Run Act Directly From VS Code! : check <a href='https://sanjulaganepola.github.io/github-local-actions-docs/'>here</a> it is recommended by act <a href='https://github.com/nektos/act'>docs</a></li>
 </ul>
 
 <h2>References</h2>
