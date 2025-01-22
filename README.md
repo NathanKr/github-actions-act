@@ -35,8 +35,30 @@ make sure you run the following as administrator
 ```bash
 choco install act-cli
 ```
-This image show the results if this command on my machine 
+This image show the results of the above command on my machine 
 <img src='./figs/install-act-cli-using-choco.png'/>
+
+Following this you can check act installation using
+
+```bash
+act --version
+```
+
+and get act help using
+
+```bash
+act --help
+```
+
+When you invoke act inside a project with workspace 
+
+```bash
+act -l
+```
+
+and it will list the workflows files as shown in the following image
+
+<img src='./figs/act-list.png'/>
 
 </li>
 </ul>

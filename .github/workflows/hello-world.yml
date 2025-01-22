@@ -1,0 +1,11 @@
+name: Hello world # worflow name
+
+on: [push] # event
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest # runner version
+
+    steps:
+    - name: Run a one-line script
+      run: echo "Hello, world!" # what to run
