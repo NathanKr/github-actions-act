@@ -99,7 +99,7 @@ docker
 
 
 <h2>Demo</h2>
-dashboard ?
+run like in files 1,2,3 and copy output
 
 
 
