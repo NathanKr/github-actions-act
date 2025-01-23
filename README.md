@@ -127,6 +127,7 @@ It will list the <code>workflow</code> files as shown in the following image
 </ul>
 
 <h2>Demo</h2>
+make sure the docker is run , simply run the docker desktop and look for the icon in the windows tray
 run without package file and directories src , test
 
 
