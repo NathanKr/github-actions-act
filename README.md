@@ -48,7 +48,7 @@ variables and filesystem are all configured to match what GitHub provides</p>
 <a href='https://docs.docker.com/desktop/setup/install/windows-install/'>here</a></li>
 <li>Install <code>act</code> , 
 following <a href='https://nektosact.com/installation/index.html'>this guide</a> 
-i used chocolatey which is a packager manager for Windows 
+i used chocolatey which is a package manager for Windows 
 <a href='https://nektosact.com/installation/chocolatey.html'>here</a> 
 
 Make sure you run the following as administrator
