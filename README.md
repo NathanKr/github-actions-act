@@ -127,7 +127,7 @@ It will list the <code>workflow</code> files as shown in the following image
 </ul>
 
 <h2>Demo</h2>
-run like in files 1,2,3 and copy output
+run without package file and directories src , test
 
 
 
