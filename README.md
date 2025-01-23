@@ -127,6 +127,41 @@ It will list the <code>workflow</code> files as shown in the following image
 </ul>
 
 <h2>Demo</h2>
+<p>Make sure Docker is running. You can simply start Docker Desktop.</p>
+
+<h3>First Run</h3>
+<p>Run the project without the <code>package.json</code> file and 
+without the <code>src</code> and <code>test</code> directories.</p>
+
+<p>The following image shows the failure of the test job. Without 
+<code>package.json</code>, the runner does not know which packages to install while running the <code>test.yml</code> workflow file.</p>
+<img src="./figs/run1-fail-test-job.png" alt="Test Job Failure">
+
+<p>The output of the run appears in the file <code>act_run_1.txt</code> 
+under the <code>logs</code> folder. Verify yourself that the <code>say-hello</code>
+ job is successful.</p>
+
+<h3>Second Run</h3>
+<p>Run the project with the <code>package.json</code> file but 
+without the <code>src</code> and <code>test</code> directories.</p>
+
+<p>The following image shows the failure of the test job. 
+Without the <code>test</code> directory, the runner cannot invoke the test job.</p>
+<img src="./figs/run2-fail-test-job.png" alt="Test Job Failure">
+
+<p>The output of the run appears in the file <code>act_run_2.txt</code> under the <code>logs</code> folder. Verify yourself that the test job failed.</p>
+
+<h3>Third Run</h3>
+<p>Run the project with the <code>package.json</code> file and with 
+the <code>src</code> and <code>test</code> directories.</p>
+
+<p>The following image shows the success of the tests and the test job.</p>
+<img src="./figs/run3-success-jobs.png" alt="Test Job Success">
+
+<p>The output of the run appears in the file <code>act_run_3.txt</code> under the <code>logs</code> folder. Verify yourself that the <code>test</code> job and <code>say-hello</code> jobs are successful.</p>
+
+
+<h2>Demo</h2>
 Make sure the docker is running , simply run the docker desktop 
 
 <h3>First run</h3>
