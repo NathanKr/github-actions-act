@@ -127,10 +127,34 @@ It will list the <code>workflow</code> files as shown in the following image
 </ul>
 
 <h2>Demo</h2>
-make sure the docker is run , simply run the docker desktop and look for the icon in the windows tray
-run without package file and directories src , test
+Make sure the docker is running , simply run the docker desktop 
+
+<h3>First run</h3>
+Run without package.json file and without directories src , test
+
+<p>The following image show the failure of the test job because without package.json the runner does not know which packages to install while running the test.yml workflow file</p>
+
+<img src='./figs/run1-fail-test-job.png'/>
+
+The output of the run appears in the file act_run_1.txt under logs folder. Check yourself here that the say-hello job is success
+
+<h3>Second run</h3>
+Run with package.json file but without src and test directories 
+
+The following image show the failure of the test job because without test directory the runner can not invoke the test job 
+
+<img src='./figs/run2-fail-test-job.png'/>
+
+The output of the run appears in the file act_run_2.txt under logs folder. Check yourself here that the test job is a failure
 
 
+<h3>Third run</h3>
+Run with package.json file and with src and test directories 
+
+The following image show the success of the tests and the test job
+<img src='./figs/run3-success-jobs.png'/>
+
+The output of the run appears in the file act_run_3.txt under logs folder. Check yourself here that the test job and say-hello jobs are success
 
 <h2>Points of Interest</h2>
 <ul>
@@ -148,6 +172,6 @@ run without package file and directories src , test
 <h2>References</h2>
 <ul>
     <li><a href='https://github.com/nektos/act'>GitHub repository for <code>act</code></a></li>
-    <li><a href='https://youtu.be/x239z6DdE0A?si=Y0pzO1AkyiMUoe-T'> Introduction to <code>GitHub Actions</code>: Learn Workflows with Examples </a></li>
+    <li><a href='https://youtu.be/x239z6DdE0A?si=Y0pzO1AkyiMUoe-T'> Introduction to <code>GitHub Actions</code>: Learn Workflows with Examples </a>. Here we have same worflows as in this repo</li>
 </ul>
 

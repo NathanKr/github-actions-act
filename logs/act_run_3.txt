@@ -1,0 +1,78 @@
+PS F:\Nathan\Misc\GitHub\github-actions-act> act
+time="2025-01-23T08:06:41+02:00" level=info msg="Using docker host 'npipe:////./pipe/docker_engine', and 
+daemon socket 'npipe:////./pipe/docker_engine'"
+[Hello world/say-hello] 🚀  Start image=catthehacker/ubuntu:act-latest
+[Test CI/test         ] 🚀  Start image=catthehacker/ubuntu:act-latest
+[Hello world/say-hello]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true
+[Test CI/test         ]   🐳  docker pull image=catthehacker/ubuntu:act-latest platform= username= forcePull=true
+[Hello world/say-hello]   🐳  docker create image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Test CI/test         ]   🐳  docker create image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Hello world/say-hello]   🐳  docker run image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Test CI/test         ]   🐳  docker run image=catthehacker/ubuntu:act-latest platform= entrypoint=["tail" "-f" "/dev/null"] cmd=[] network="host"
+[Hello world/say-hello]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[Test CI/test         ]   🐳  docker exec cmd=[node --no-warnings -e console.log(process.execPath)] user= workdir=
+[Test CI/test         ]   ☁  git clone 'https://github.com/actions/setup-node' # ref=v3
+[Hello world/say-hello] ⭐ Run Main Run a one-line script
+[Hello world/say-hello]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/0] user= workdir=
+| Hello, world!
+[Hello world/say-hello]   ✅  Success - Main Run a one-line script
+[Hello world/say-hello] Cleaning up container for job say-hello
+[Hello world/say-hello] 🏁  Job succeeded
+[Test CI/test         ] ⭐ Run Main Checkout code
+[Test CI/test         ]   🐳  docker cp src=F:\Nathan\Misc\GitHub\github-actions-act\. dst=/mnt/f/Nathan/Misc/GitHub/github-actions-act
+[Test CI/test         ]   ✅  Success - Main Checkout code
+[Test CI/test         ] ⭐ Run Main Setup Node.js
+[Test CI/test         ]   🐳  docker cp src=C:\Users\User\.cache\act/actions-setup-node@v3/ dst=/var/run/act/actions/actions-setup-node@v3/
+[Test CI/test         ]   🐳  docker exec cmd=[/opt/acttoolcache/node/18.20.5/x64/bin/node /var/run/act/actions/actions-setup-node@v3/dist/setup/index.js] user= workdir=
+[Test CI/test         ]   💬  ::debug::isExplicit: 20.9.0
+[Test CI/test         ]   💬  ::debug::explicit? true
+[Test CI/test         ]   💬  ::debug::checking cache: /opt/hostedtoolcache/node/20.9.0/x64
+[Test CI/test         ]   💬  ::debug::Found tool in cache node 20.9.0 x64
+| Found in cache @ /opt/hostedtoolcache/node/20.9.0/x64
+[Test CI/test         ]   ❓  ::group::Environment details
+| node: v20.9.0
+| npm: 10.1.0
+| yarn:
+[Test CI/test         ]   ❓  ::endgroup::
+[Test CI/test         ]   ❓ add-matcher /run/act/actions/actions-setup-node@v3/.github/tsc.json
+[Test CI/test         ]   ❓ add-matcher /run/act/actions/actions-setup-node@v3/.github/eslint-stylish.jso
+n
+[Test CI/test         ]   ❓ add-matcher /run/act/actions/actions-setup-node@v3/.github/eslint-compact.jso
+n
+[Test CI/test         ]   ✅  Success - Main Setup Node.js
+[Test CI/test         ]   ⚙  ::set-output:: node-version=v20.9.0
+[Test CI/test         ]   ⚙  ::add-path:: /opt/hostedtoolcache/node/20.9.0/x64/bin
+[Test CI/test         ] ⭐ Run Main Install dependencies
+[Test CI/test         ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/2] user= workdir=
+| 
+| added 44 packages, and audited 45 packages in 12s
+|
+| 12 packages are looking for funding
+|   run `npm fund` for details
+|
+| found 0 vulnerabilities
+[Test CI/test         ]   ✅  Success - Main Install dependencies
+[Test CI/test         ] ⭐ Run Main Run tests
+[Test CI/test         ]   🐳  docker exec cmd=[bash -e /var/run/act/workflow/3] user= workdir=
+| 
+| > github-actions-act@1.0.0 test
+| > vitest
+|
+| 
+|  RUN  v3.0.3 /mnt/f/Nathan/Misc/GitHub/github-actions-act
+|
+|  ✓ test/utils.test.js (2 tests) 1ms
+| 
+|  Test Files  1 passed (1)
+|       Tests  2 passed (2)
+|    Start at  06:06:59
+|    Duration  288ms (transform 45ms, setup 0ms, collect 19ms, tests 1ms, environment 0ms, prepare 94ms) 
+|
+[Test CI/test         ]   ✅  Success - Main Run tests
+[Test CI/test         ] ⭐ Run Post Setup Node.js
+[Test CI/test         ]   🐳  docker exec cmd=[/opt/acttoolcache/node/18.20.5/x64/bin/node /var/run/act/actions/actions-setup-node@v3/dist/cache-save/index.js] user= workdir=
+[Test CI/test         ]   💬  ::debug::Caching for '' is not supported
+[Test CI/test         ]   ✅  Success - Post Setup Node.js
+[Test CI/test         ] Cleaning up container for job test
+[Test CI/test         ] 🏁  Job succeeded
+PS F:\Nathan\Misc\GitHub\github-actions-act> 
