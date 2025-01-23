@@ -58,11 +58,11 @@ choco install act-cli
 ```
 
 This image show the results of the above command on my Windows 10 machine 
-<img src='./figs/install-act-cli-using-choco.png'/>
+<img src='./figs/install-act-cli-using-choco.png' alt="Installing act-cli using Chocolatey on Windows 10"/>
 </li>
 </ul>
 
-<h2>Remarks</h2>
+<h3>Remarks</h3>
 <ul>
     <li>You can also use <code>winget</code> to install <code>act</code>. 
     It is part of Windows 10 as of version 1809.</li>
@@ -116,7 +116,7 @@ act -l
 
 It will list the <code>workflow</code> files as shown in the following image
 
-<img src='./figs/act-list.png'/>
+<img src='./figs/act-list.png' alt='List of workflow files displayed by act command'/>
 
 
 <h2>Technologies Used</h2>
@@ -135,7 +135,7 @@ without the <code>src</code> and <code>test</code> directories.</p>
 
 <p>The following image shows the failure of the test job. Without 
 <code>package.json</code>, the runner does not know which packages to install while running the <code>test.yml</code> workflow file.</p>
-<img src="./figs/run1-fail-test-job.png" alt="Test Job Failure">
+<img src="./figs/run1-fail-test-job.png" alt="Test job failure without package.json file">
 
 <p>The output of the run appears in the file <code>act_run_1.txt</code> 
 under the <code>logs</code> folder. Verify yourself that the <code>say-hello</code>
@@ -147,7 +147,7 @@ without the <code>src</code> and <code>test</code> directories.</p>
 
 <p>The following image shows the failure of the test job. 
 Without the <code>test</code> directory, the runner cannot invoke the test job.</p>
-<img src="./figs/run2-fail-test-job.png" alt="Test Job Failure">
+<img src="./figs/run2-fail-test-job.png" alt="Test job failure without test directory">
 
 <p>The output of the run appears in the file <code>act_run_2.txt</code> under the <code>logs</code> folder. Verify yourself that the test job failed.</p>
 
@@ -156,7 +156,7 @@ Without the <code>test</code> directory, the runner cannot invoke the test job.<
 the <code>src</code> and <code>test</code> directories.</p>
 
 <p>The following image shows the success of the tests and the test job.</p>
-<img src="./figs/run3-success-jobs.png" alt="Test Job Success">
+<img src="./figs/run3-success-jobs.png" alt="Successful test jobs after adding package.json and directories">
 
 <p>The output of the run appears in the file <code>act_run_3.txt</code> under the <code>logs</code> folder. Verify yourself that the <code>test</code> job and <code>say-hello</code> jobs are successful.</p>
 
